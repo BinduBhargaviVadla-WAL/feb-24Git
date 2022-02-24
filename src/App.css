@@ -1,0 +1,69 @@
+.registration{
+  text-align: center;
+}
+form{
+  border: 3px solid black;
+  width: 40%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  
+}
+input{
+  padding: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  margin: 10px auto;
+  box-sizing: border-box;
+  
+} 
+
+.text-danger{
+  color: red;
+}
+.submitBtn{
+  font-size: 18px;
+  background-color: rgb(3, 114, 3);
+  border: 2px solid rgb(16, 45, 126);
+  padding: 14px;
+  width: 90%;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+.todo{
+  text-align: center;
+}
+table{
+  border-collapse: collapse;
+  margin: auto;
+  border: 2px solid #ddd;
+}
+th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04283f;
+  color: white;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  
+}
+td{
+  text-align: left;
+}
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+@media screen and (max-width : 400px){
+  form{
+    width: 80%;
+    
+  }
+}
