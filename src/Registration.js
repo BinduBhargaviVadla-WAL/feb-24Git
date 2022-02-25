@@ -17,11 +17,9 @@ const Registration = () => {
                 Age: formik.values.age,
                 Password: formik.values.password
             }
-            console.log(userOb);
             if (JSON.parse(localStorage.getItem("users"))) {
                 let localUsers = JSON.parse(localStorage.getItem("users"));
                 user.push(localUsers);
-                console.log("local storage")
             }
             user.push(userOb);
             localStorage.setItem("users", JSON.stringify(user));
