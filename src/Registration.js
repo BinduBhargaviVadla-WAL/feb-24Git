@@ -1,12 +1,10 @@
 import { useFormik, Field, form } from "formik";
-import { useState } from "react";
 const Registration = () => {
-    let [users, setUser] = useState([]);
     let user = [];
     let formik = useFormik({
         initialValues: {
-            fullName: "Initial name",
-            email: "abc@gmail.com",
+            fullName: "",
+            email: "",
             age: 21,
             password: "",
         },
@@ -25,9 +23,8 @@ const Registration = () => {
                 user.push(localUsers);
                 console.log("local storage")
             }
-            users.push(userOb);
-            setUser(users);
-            localStorage.setItem("users", JSON.stringify(users));
+            user.push(userOb);
+            localStorage.setItem("users", JSON.stringify(user));
         },
         validate() {
             const errors = {};
@@ -54,6 +51,7 @@ const Registration = () => {
                 <input
                     type="text"
                     name="fullName"
+                    placeholder="Enter Full Name"
                     value={formik.values.fullName}
                     onChange={formik.handleChange}
                 />
@@ -63,6 +61,7 @@ const Registration = () => {
                 <input
                     type="email"
                     name="email"
+                    placeholder="Enter Email Id"
                     value={formik.values.email}
                     onChange={formik.handleChange}
                 />
@@ -72,6 +71,7 @@ const Registration = () => {
                 <input
                     type="number"
                     name="age"
+                    placeholder="Enter Age"
                     value={formik.values.age}
                     onChange={formik.handleChange}
                 />
@@ -81,6 +81,7 @@ const Registration = () => {
                 <input
                     type="password"
                     name="password"
+                    placeholder="Enter Password"
                     value={formik.values.password}
                     onChange={formik.handleChange}
                 />
